@@ -15,6 +15,7 @@ import java.io.IOException;
  * @author guagua
  * @date 2023/2/8 13:44
  * @describe
+ * 集群运行：hadoop jar hadoop-1.0-SNAPSHOT.jar com.guagua.wc.WordCountDriver /user/guagua/input /user/guagua/output
  */
 public class WordCountDriver {
 
