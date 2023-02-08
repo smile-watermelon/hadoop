@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00b65004-b861-4787-a7cf-34a829ad1fa3" name="Changes" comment="little">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowReducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/kvformat/KeyValueFormatDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/kvformat/KeyValueFormatMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/kvformat/KeyValueFormatReducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/wc/WordCountDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/wc/WordCountDriver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +62,12 @@
       <recent name="$PROJECT_DIR$/data/input" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.guagua.kvformat" />
       <recent name="com.guagua.flow" />
       <recent name="com.guagua.wc" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WordCountDriver">
+  <component name="RunManager" selected="Application.KeyValueFormatDriver">
     <configuration name="FlowDriver" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.guagua.flow.FlowDriver" />
       <module name="hadoop" />
@@ -80,6 +79,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.guagua.flow.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KeyValueFormatDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.guagua.kvformat.KeyValueFormatDriver" />
+      <module name="hadoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.guagua.kvformat.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,22 +149,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HadoopFsClient.fileInfoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hadoop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.guagua.fs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.guagua.fs" />
-      <option name="MAIN_CLASS_NAME" value="com.guagua.fs.HadoopFsClient" />
-      <option name="METHOD_NAME" value="fileInfoTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HadoopFsClient.isDirTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hadoop" />
       <extension name="coverage">
@@ -187,11 +183,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.KeyValueFormatDriver" />
         <item itemvalue="JUnit.HadoopFsClient.readFileSeek2Test" />
         <item itemvalue="JUnit.HadoopFsClient.copyFileToLocalTest" />
         <item itemvalue="JUnit.HadoopFsClient.copyFileToFsIOTest" />
         <item itemvalue="JUnit.HadoopFsClient.isDirTest" />
-        <item itemvalue="JUnit.HadoopFsClient.fileInfoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +207,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675839356526</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="little">
+      <created>1675862751339</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675862751339</updated>
+    </task>
+    <task id="LOCAL-00003" summary="little">
+      <created>1675862785884</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675862785884</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
