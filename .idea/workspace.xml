@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00b65004-b861-4787-a7cf-34a829ad1fa3" name="Changes" comment="little">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/kvformat/KeyValueFormatDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/kvformat/KeyValueFormatMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/kvformat/KeyValueFormatReducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="00b65004-b861-4787-a7cf-34a829ad1fa3" name="Changes" comment="keyValueInputFormat">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/nlinefomart/NLineFormatDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/nlinefomart/NLineFormatMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/nlinefomart/NLineFormatReducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/input/guagua.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/input/guagua.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,11 +48,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/guagua/code/my/hadoop/src/main/java/com/guagua/flow"
+    "last_opened_file_path": "/Users/guagua/code/my/hadoop/src/main/java/com/guagua/nlinefomart"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/guagua/nlinefomart" />
       <recent name="$PROJECT_DIR$/src/main/java/com/guagua/flow" />
       <recent name="$PROJECT_DIR$/data/input" />
     </key>
@@ -67,7 +68,7 @@
       <recent name="com.guagua.wc" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.KeyValueFormatDriver">
+  <component name="RunManager" selected="Application.NLineFormatDriver">
     <configuration name="FlowDriver" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.guagua.flow.FlowDriver" />
       <module name="hadoop" />
@@ -92,6 +93,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.guagua.kvformat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NLineFormatDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.guagua.nlinefomart.NLineFormatDriver" />
+      <module name="hadoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.guagua.nlinefomart.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,22 +163,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HadoopFsClient.isDirTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hadoop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.guagua.fs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.guagua.fs" />
-      <option name="MAIN_CLASS_NAME" value="com.guagua.fs.HadoopFsClient" />
-      <option name="METHOD_NAME" value="isDirTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HadoopFsClient.readFileSeek2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hadoop" />
       <extension name="coverage">
@@ -183,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NLineFormatDriver" />
         <item itemvalue="Application.KeyValueFormatDriver" />
         <item itemvalue="JUnit.HadoopFsClient.readFileSeek2Test" />
         <item itemvalue="JUnit.HadoopFsClient.copyFileToLocalTest" />
         <item itemvalue="JUnit.HadoopFsClient.copyFileToFsIOTest" />
-        <item itemvalue="JUnit.HadoopFsClient.isDirTest" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675862785884</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="keyValueInputFormat">
+      <created>1675864377634</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675864377634</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,6 +242,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="little" />
-    <option name="LAST_COMMIT_MESSAGE" value="little" />
+    <MESSAGE value="keyValueInputFormat" />
+    <option name="LAST_COMMIT_MESSAGE" value="keyValueInputFormat" />
   </component>
 </project>
