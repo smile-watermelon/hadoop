@@ -23,12 +23,17 @@ import java.io.IOException;
 public class FlowDriver {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
+        args = new String[]{"data/flow", "data/flow-output"};
 //        1、获取job对象
         Configuration conf = new Configuration();
         Job job = Job.getInstance(conf);
 
 //        2、设置jar存储位置
         job.setJarByClass(FlowDriver.class);
+
+        job.setPartitionerClass(FlowPartitioner.class);
+        job.setNumReduceTasks(5);
+
 
 //        3、关联mapper 和 reducer
         job.setMapperClass(FlowMapper.class);
