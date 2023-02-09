@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00b65004-b861-4787-a7cf-34a829ad1fa3" name="Changes" comment="自定义分区器">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/sort/FlowBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/sort/FlowBeanSortMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/sort/FlowBeanSortReducer.java" afterDir="false" />
+    <list default="true" id="00b65004-b861-4787-a7cf-34a829ad1fa3" name="Changes" comment="排序">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/sort/FlowSortPartitioner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/flow/phone_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/flow/phone_data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +47,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/Users/guagua/code/my/hadoop/src/main/java/com/guagua/nlinefomart",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.sourceCode.Java"
   }
 }]]></component>
@@ -243,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675921444234</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="排序">
+      <created>1675929408499</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675929408499</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,6 +266,7 @@
     <MESSAGE value="keyValueInputFormat" />
     <MESSAGE value="NLineInputFormat" />
     <MESSAGE value="自定义分区器" />
-    <option name="LAST_COMMIT_MESSAGE" value="自定义分区器" />
+    <MESSAGE value="排序" />
+    <option name="LAST_COMMIT_MESSAGE" value="排序" />
   </component>
 </project>
