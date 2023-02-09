@@ -1,6 +1,6 @@
-package com.guagua.flow;
+package com.guagua.sort;
 
-import org.apache.hadoop.io.Writable;
+import org.apache.hadoop.io.WritableComparable;
 
 import java.io.DataInput;
 import java.io.DataOutput;
@@ -8,37 +8,40 @@ import java.io.IOException;
 
 /**
  * @author guagua
- * @date 2023/2/8 15:33
+ * @date 2023/2/9 15:16
  * @describe
  */
-public class FlowBean implements Writable {
+public class FlowBean implements WritableComparable<FlowBean> {
 
     private long flowUp;
     private long flowDown;
     private long flowSum;
 
-    public FlowBean() {
-    }
-
-    public FlowBean(long flowUp, long flowDown) {
-        super();
-        this.flowUp = flowUp;
-        this.flowDown = flowDown;
-        this.flowSum = flowUp + flowDown;
-    }
-
     @Override
     public void write(DataOutput out) throws IOException {
-        out.writeLong(this.flowUp);
-        out.writeLong(this.flowDown);
-        out.writeLong(this.flowSum);
+        out.writeLong(flowUp);
+        out.writeLong(flowDown);
+        out.writeLong(flowSum);
     }
 
     @Override
     public void readFields(DataInput in) throws IOException {
-        this.flowUp = in.readLong();
-        this.flowDown = in.readLong();
-        this.flowSum = in.readLong();
+        flowUp = in.readLong();
+        flowDown = in.readLong();
+        flowSum = in.readLong();
+    }
+
+    @Override
+    public int compareTo(FlowBean bean) {
+        int result;
+        if (flowSum > bean.getFlowSum()) {
+            result = -1;
+        } else if (flowSum < bean.getFlowSum()) {
+            result = 1;
+        } else {
+            result = 0;
+        }
+        return result;
     }
 
     public long getFlowUp() {
@@ -67,7 +70,6 @@ public class FlowBean implements Writable {
 
     @Override
     public String toString() {
-        return
-                flowUp + "," + flowDown + "," + flowSum;
+        return flowUp + "," + flowDown + "," + flowSum;
     }
 }

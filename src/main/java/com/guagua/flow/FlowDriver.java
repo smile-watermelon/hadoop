@@ -11,6 +11,7 @@ import org.apache.hadoop.mapreduce.Cluster;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 
 import java.io.IOException;
 
@@ -26,14 +27,16 @@ public class FlowDriver {
         args = new String[]{"data/flow", "data/flow-output"};
 //        1、获取job对象
         Configuration conf = new Configuration();
+        // 设置输出文件中，k和v的分隔符
+        conf.set(TextOutputFormat.SEPERATOR, ",");
+
         Job job = Job.getInstance(conf);
 
 //        2、设置jar存储位置
         job.setJarByClass(FlowDriver.class);
 
         job.setPartitionerClass(FlowPartitioner.class);
-        job.setNumReduceTasks(5);
-
+        job.setNumReduceTasks(1);
 
 //        3、关联mapper 和 reducer
         job.setMapperClass(FlowMapper.class);

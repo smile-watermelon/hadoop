@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00b65004-b861-4787-a7cf-34a829ad1fa3" name="Changes" comment="NLineInputFormat">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowPartitioner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/myformat/MyDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/myformat/MyInputFormat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/myformat/MyRecordReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/myformat/SequenceFileMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/myformat/SequenceFileReducer.java" afterDir="false" />
+    <list default="true" id="00b65004-b861-4787-a7cf-34a829ad1fa3" name="Changes" comment="自定义分区器">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/sort/FlowBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/sort/FlowBeanSortMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/sort/FlowBeanSortReducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/flow/phone_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/flow/phone_data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +52,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/guagua/code/my/hadoop/src/main/java/com/guagua/nlinefomart"
+    "last_opened_file_path": "/Users/guagua/code/my/hadoop/src/main/java/com/guagua/nlinefomart",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -70,12 +71,13 @@
       <recent name="$PROJECT_DIR$/data/input" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.guagua.sort" />
       <recent name="com.guagua.kvformat" />
       <recent name="com.guagua.flow" />
       <recent name="com.guagua.wc" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FlowDriver">
+  <component name="RunManager" selected="Application.FlowSortDriver">
     <configuration name="FlowDriver" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.guagua.flow.FlowDriver" />
       <module name="hadoop" />
@@ -87,6 +89,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.guagua.flow.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlowSortDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.guagua.sort.FlowSortDriver" />
+      <module name="hadoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.guagua.sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -151,22 +166,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HadoopFsClient.copyFileToLocalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hadoop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.guagua.fs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.guagua.fs" />
-      <option name="MAIN_CLASS_NAME" value="com.guagua.fs.HadoopFsClient" />
-      <option name="METHOD_NAME" value="copyFileToLocalTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HadoopFsClient.readFileSeek2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hadoop" />
       <extension name="coverage">
@@ -185,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FlowSortDriver" />
         <item itemvalue="Application.MyDriver" />
         <item itemvalue="Application.NLineFormatDriver" />
         <item itemvalue="Application.KeyValueFormatDriver" />
         <item itemvalue="JUnit.HadoopFsClient.readFileSeek2Test" />
-        <item itemvalue="JUnit.HadoopFsClient.copyFileToLocalTest" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675864903271</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="自定义分区器">
+      <created>1675921444234</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675921444234</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,6 +261,7 @@
     <MESSAGE value="little" />
     <MESSAGE value="keyValueInputFormat" />
     <MESSAGE value="NLineInputFormat" />
-    <option name="LAST_COMMIT_MESSAGE" value="NLineInputFormat" />
+    <MESSAGE value="自定义分区器" />
+    <option name="LAST_COMMIT_MESSAGE" value="自定义分区器" />
   </component>
 </project>
