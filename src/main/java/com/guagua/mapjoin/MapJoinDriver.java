@@ -44,7 +44,7 @@ public class MapJoinDriver {
         FileInputFormat.setInputPaths(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
-        job.addCacheFile(new URI("file:///Users/guagua/improve/hadoop/ziliao/11_input/inputtable/pd.txt"));
+        job.addCacheFile(new URI("/Users/guagua/improve/hadoop/ziliao/11_input/inputtable/pd.txt"));
 
         // 只需要map阶段，不需要reduce阶段
         job.setNumReduceTasks(0);
