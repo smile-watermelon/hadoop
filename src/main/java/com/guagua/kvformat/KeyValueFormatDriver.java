@@ -21,7 +21,7 @@ public class KeyValueFormatDriver {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
 
-        args = new String[]{"data/input", "data/output"};
+        args = new String[]{"data/inputguagua", "output/guagua-output"};
 
         Configuration conf = new Configuration();
         conf.set(KeyValueLineRecordReader.KEY_VALUE_SEPERATOR, " ");

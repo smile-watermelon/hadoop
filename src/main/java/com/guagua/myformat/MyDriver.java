@@ -20,7 +20,7 @@ public class MyDriver {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
 
-        args = new String[]{"/Users/guagua/improve/hadoop/ziliao/11_input/inputinputformat", "data/output"};
+        args = new String[]{"input/inputinputformat", "output/format-output"};
 
         Configuration conf = new Configuration();
         Job job = Job.getInstance(conf);

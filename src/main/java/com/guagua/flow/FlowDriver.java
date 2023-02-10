@@ -24,7 +24,7 @@ import java.io.IOException;
 public class FlowDriver {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
-        args = new String[]{"/Users/guagua/improve/hadoop/ziliao/11_input/inputflow", "data/flow-out"};
+        args = new String[]{"input/inputflow", "output/flow-out"};
 //        1、获取job对象
         Configuration conf = new Configuration();
         // 设置输出文件中，k和v的分隔符

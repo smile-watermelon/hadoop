@@ -25,7 +25,7 @@ public class NLineFormatDriver {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
 
-        args = new String[]{"data/input", "data/output"};
+        args = new String[]{"input/guagua", "output/nline-output"};
 
         Configuration conf = new Configuration();
 //        conf.set(KeyValueLineRecordReader.KEY_VALUE_SEPERATOR, " ");

@@ -23,7 +23,7 @@ import java.io.IOException;
 public class OrderDriver {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
-        args = new String[]{"/Users/guagua/improve/hadoop/ziliao/11_input/inputorder", "data/order-output"};
+        args = new String[]{"input/inputorder", "output/order-output"};
 //        1、获取job对象
         Configuration conf = new Configuration();
         // 设置输出文件中，k和v的分隔符

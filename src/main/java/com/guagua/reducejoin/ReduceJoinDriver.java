@@ -19,17 +19,17 @@ import java.io.IOException;
  * @date 2023/2/10 11:08
  * @describe
  */
-public class JoinDriver {
+public class ReduceJoinDriver {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
-        args = new String[]{"/Users/guagua/improve/hadoop/ziliao/11_input/inputtable", "data/table-out"};
+        args = new String[]{"input/inputtable", "output/reducejoin-output"};
 
         Configuration conf = new Configuration();
 //        conf.set(KeyValueLineRecordReader.KEY_VALUE_SEPERATOR, " ");
 
         Job job = Job.getInstance(conf);
 
-        job.setJarByClass(JoinDriver.class);
+        job.setJarByClass(ReduceJoinDriver.class);
 
         job.setMapperClass(JoinMapper.class);
         job.setReducerClass(JoinReducer.class);

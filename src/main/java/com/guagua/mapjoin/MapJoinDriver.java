@@ -1,6 +1,5 @@
 package com.guagua.mapjoin;
 
-import com.guagua.reducejoin.JoinDriver;
 import com.guagua.reducejoin.JoinMapper;
 import com.guagua.reducejoin.JoinReducer;
 import com.guagua.reducejoin.TableBean;
@@ -24,7 +23,7 @@ import java.net.URISyntaxException;
 public class MapJoinDriver {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException, URISyntaxException {
-        args = new String[]{"/Users/guagua/improve/hadoop/ziliao/11_input/inputtable2", "data/mapjoin-out"};
+        args = new String[]{"input/inputtable2", "out/mapjoin-out"};
 
         Configuration conf = new Configuration();
 //        conf.set(KeyValueLineRecordReader.KEY_VALUE_SEPERATOR, " ");

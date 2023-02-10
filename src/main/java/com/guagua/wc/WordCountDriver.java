@@ -21,7 +21,7 @@ import java.io.IOException;
 public class WordCountDriver {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
-        args = new String[]{"/Users/guagua/improve/hadoop/ziliao/11_input/inputcombinetextinputformat", "data/output"} ;
+        args = new String[]{"input/inputcombinetextinputformat", "output/combine-output"} ;
 //        1、获取job对象
         Configuration conf = new Configuration();
         Job job = Job.getInstance(conf);

@@ -20,7 +20,7 @@ public class FlowSortDriver {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
 //        args = new String[]{"data/flow", "data/flow-output"};
-        args = new String[]{"data/flow-output", "data/flow-sort"};
+        args = new String[]{"output/flow-output", "output/flow-sort-output"};
 //        1、获取job对象
         Configuration conf = new Configuration();
         conf.set(TextOutputFormat.SEPERATOR, ",");

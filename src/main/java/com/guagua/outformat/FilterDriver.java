@@ -19,7 +19,7 @@ public class FilterDriver {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
 
-        args = new String[]{"/Users/guagua/improve/hadoop/ziliao/11_input/inputoutputformat", "data/filter-out"};
+        args = new String[]{"input/inputoutputformat", "data/filter-output"};
 
         Configuration conf = new Configuration();
 //        conf.set(KeyValueLineRecordReader.KEY_VALUE_SEPERATOR, " ");
