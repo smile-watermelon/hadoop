@@ -7,6 +7,8 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 /**
+ * 序列化对象实现 Writable
+ *
  * @author guagua
  * @date 2023/2/8 15:33
  * @describe

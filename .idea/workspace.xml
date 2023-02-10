@@ -4,13 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00b65004-b861-4787-a7cf-34a829ad1fa3" name="Changes" comment="订单分组取最大值">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/outformat/FilterDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/outformat/FilterMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/outformat/FilterOutputFormat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/outformat/FilterReducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/outformat/MyFilterRecordWriter.java" afterDir="false" />
+    <list default="true" id="00b65004-b861-4787-a7cf-34a829ad1fa3" name="Changes" comment="自定义output">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/mapjoin/MapJoinDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/mapjoin/MapJoinMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/outdb/LogBeanDBWritable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/outdb/LogDBDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/outdb/LogDBMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/outdb/LogDBReducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/outdb/LogOutputFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/outdb/LogRecordWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/reducejoin/JoinDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/reducejoin/JoinMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/reducejoin/JoinReducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/reducejoin/TableBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guagua/reducejoin/TableGroupingComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowBean.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +69,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.guagua.mapjoin" />
       <recent name="com.guagua.outformat" />
       <recent name="com.guagua.myformat" />
     </key>
@@ -80,20 +91,7 @@
       <recent name="com.guagua.flow" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FilterDriver">
-    <configuration name="FilterDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.guagua.outformat.FilterDriver" />
-      <module name="hadoop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.guagua.outformat.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.MapJoinDriver">
     <configuration name="FlowDriver" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.guagua.flow.FlowDriver" />
       <module name="hadoop" />
@@ -112,12 +110,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlowSortDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.guagua.sort.FlowSortDriver" />
+    <configuration name="JoinDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.guagua.reducejoin.JoinDriver" />
       <module name="hadoop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.guagua.sort.*" />
+          <option name="PATTERN" value="com.guagua.reducejoin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,12 +123,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.guagua.myformat.MyDriver" />
+    <configuration name="LogDBDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.guagua.outdb.LogDBDriver" />
       <module name="hadoop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.guagua.myformat.*" />
+          <option name="PATTERN" value="com.guagua.outdb.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,12 +136,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NLineFormatDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.guagua.nlinefomart.NLineFormatDriver" />
+    <configuration name="MapJoinDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.guagua.mapjoin.MapJoinDriver" />
       <module name="hadoop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.guagua.nlinefomart.*" />
+          <option name="PATTERN" value="com.guagua.mapjoin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -182,13 +180,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.guagua.outformat.FilterDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.guagua.outformat.FilterDriver" />
+      <module name="hadoop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.guagua.outdb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FilterDriver" />
+        <item itemvalue="Application.MapJoinDriver" />
+        <item itemvalue="Application.JoinDriver" />
+        <item itemvalue="Application.LogDBDriver" />
+        <item itemvalue="Application.com.guagua.outformat.FilterDriver" />
         <item itemvalue="Application.OrderDriver" />
-        <item itemvalue="Application.FlowSortDriver" />
-        <item itemvalue="Application.MyDriver" />
-        <item itemvalue="Application.NLineFormatDriver" />
       </list>
     </recent_temporary>
   </component>
@@ -278,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675941133230</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="自定义output">
+      <created>1675951498104</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675951498104</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -301,6 +319,18 @@
     <MESSAGE value="分区排序" />
     <MESSAGE value="combiner 优化" />
     <MESSAGE value="订单分组取最大值" />
-    <option name="LAST_COMMIT_MESSAGE" value="订单分组取最大值" />
+    <MESSAGE value="自定义output" />
+    <option name="LAST_COMMIT_MESSAGE" value="自定义output" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/guagua/reducejoin/TableBean.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
