@@ -4,22 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00b65004-b861-4787-a7cf-34a829ad1fa3" name="Changes" comment="简单的ETL">
-      <change beforePath="$PROJECT_DIR$/data/flow/phone_data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/guagua.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/guagua1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/input/guagua.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/inputguagua/guagua.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/etl1/WebLogDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/etl1/WebLogDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/flow/FlowDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/group/OrderDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/group/OrderDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/kvformat/KeyValueFormatDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/kvformat/KeyValueFormatDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/mapjoin/MapJoinDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/mapjoin/MapJoinDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/myformat/MyDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/myformat/MyDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/nlinefomart/NLineFormatDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/nlinefomart/NLineFormatDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/outformat/FilterDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/outformat/FilterDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/reducejoin/JoinDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/reducejoin/ReduceJoinDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/sort/FlowSortDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/sort/FlowSortDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/guagua/wc/WordCountDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guagua/wc/WordCountDriver.java" afterDir="false" />
+    <list default="true" id="00b65004-b861-4787-a7cf-34a829ad1fa3" name="Changes" comment="增加input">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,7 +298,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676010322956</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="增加input">
+      <created>1676011112486</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1676011112486</updated>
+    </task>
+    <task id="LOCAL-00016" summary="增加input">
+      <created>1676011156102</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1676011156102</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -337,7 +338,8 @@
     <MESSAGE value="自定义output" />
     <MESSAGE value="增加map-join ,reduce-join" />
     <MESSAGE value="简单的ETL" />
-    <option name="LAST_COMMIT_MESSAGE" value="简单的ETL" />
+    <MESSAGE value="增加input" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加input" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
