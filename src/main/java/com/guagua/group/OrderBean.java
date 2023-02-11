@@ -1,7 +1,6 @@
 package com.guagua.group;
 
 import org.apache.hadoop.io.WritableComparable;
-import org.apache.hadoop.yarn.webapp.hamlet.Hamlet;
 
 import java.io.DataInput;
 import java.io.DataOutput;
