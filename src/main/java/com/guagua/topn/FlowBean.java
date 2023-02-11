@@ -1,6 +1,7 @@
-package com.guagua.flow;
+package com.guagua.topn;
 
 import org.apache.hadoop.io.Writable;
+import org.apache.hadoop.io.WritableComparable;
 
 import java.io.DataInput;
 import java.io.DataOutput;
@@ -13,7 +14,7 @@ import java.io.IOException;
  * @date 2023/2/8 15:33
  * @describe
  */
-public class FlowBean implements Writable {
+public class FlowBean implements WritableComparable<FlowBean> {
 
     private long flowUp;
     private long flowDown;
@@ -71,5 +72,15 @@ public class FlowBean implements Writable {
     public String toString() {
         return
                 flowUp + "\t" + flowDown + "\t" + flowSum;
+    }
+
+    @Override
+    public int compareTo(FlowBean o) {
+        if(this.flowSum > o.getFlowSum()) {
+            return -1;
+        } else if (this.flowSum < o.getFlowSum()) {
+            return 1;
+        }
+        return 0;
     }
 }

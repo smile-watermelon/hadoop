@@ -19,7 +19,7 @@ public class FlowMapper extends Mapper<LongWritable, Text, Text, FlowBean> {
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String line = value.toString();
-        String[] fields = line.split(",");
+        String[] fields = line.split("\t");
         System.out.println(fields.length);
         String phone = fields[1];
         long flowUp = Long.parseLong(fields[fields.length - 3]);
