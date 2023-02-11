@@ -1,2 +1,2 @@
 # hadoop
-hadoop练习
+hadoop basic
