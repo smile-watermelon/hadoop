@@ -38,7 +38,9 @@ public class HadoopFsClient {
     public void mkdirTest() throws IOException {
         Configuration conf = new Configuration();
         conf.set("fs.defaultFS", "hdfs://hadoop-01:9000");
-        FileSystem fileSystem = FileSystem.get(conf);
+        FileSystem fileSystem = FileSystem.get(conf); // todo fileSystem 是 DistributedFileSystem 的实例
+//        Class<? extends FileSystem> aClass = fileSystem.getClass();
+//        System.out.println(aClass);
         fileSystem.mkdirs(new Path("/user/guagua"));
         fileSystem.close();
         System.out.println("over");
@@ -63,6 +65,7 @@ public class HadoopFsClient {
     public void copyFileToFsTest() throws URISyntaxException, IOException, InterruptedException {
         Configuration conf = new Configuration();
         FileSystem fileSystem = FileSystem.get(new URI("hdfs://hadoop-01:9000"), conf, "guagua");
+        // todo 通过构建 FSDataOutputStream 实例对象输出流进行字节输出上传文件
         fileSystem.copyFromLocalFile(new Path("data/guagua.txt"), new Path("/user/guagua/guagua.txt"));
         fileSystem.close();
     }

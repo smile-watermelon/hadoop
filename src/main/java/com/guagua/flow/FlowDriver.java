@@ -23,6 +23,24 @@ import java.io.IOException;
  */
 public class FlowDriver {
 
+    /**
+     * 默认使用HashPartition 根据key 和整型最大值进行 与 运算，保证分区数不超出整型最大值，再根据 reduceTask 进行取余得出数据在那个分区
+     *  (key.hashCode() & Integer.MAX_VALUE) % numReduceTasks;
+     *
+     *  切片大小计算，默认 minSize = 1,
+     *  mapreduce.input.fileinputformat.split.maxsize， 根据配置的 最大切片 参数和 块大小，取最小值，然后取最大值
+     *      Math.max(minSize, Math.min(maxSize, blockSize));
+     *
+     * CombineTextInputFormat 切片的方式：
+     *  1、先按照设置的  CombineTextInputFormat.setMaxInputSplitSize(job, 20971520); 切片大小
+     *      对文件按照大小进行切片，小于设置的值，切成一片，大于设置的值，按照大小平均切成2片
+     *  2、将所有的切片列表挨个和 设置的切面大小进行比较，小于会合并下一个切片共同形成一个切片。
+     *
+     * @param args
+     * @throws IOException
+     * @throws InterruptedException
+     * @throws ClassNotFoundException
+     */
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
         args = new String[]{"input/inputflow", "output/flow-output"};
 //        1、获取job对象
@@ -31,6 +49,7 @@ public class FlowDriver {
 //        conf.set(TextOutputFormat.SEPERATOR, ",");
 
         Job job = Job.getInstance(conf);
+        job.setJobName("流量统计");
 
 //        2、设置jar存储位置
         job.setJarByClass(FlowDriver.class);
